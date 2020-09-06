@@ -26,7 +26,7 @@ import javax.swing.JScrollPane;
 
 public class Prontuario extends JFrame {
 	
-	// Declara��o global dos componentes
+	// Declaração global dos componentes
 	private JPanel contentPane;
 	private JTabbedPane tabbedPane;
 	private JTextField fieldNome;
@@ -81,84 +81,84 @@ public class Prontuario extends JFrame {
 			}
 		});
 		
-		mnMenu.add(menuItemSair); // inser��o de item no menu
+		mnMenu.add(menuItemSair); // inserção de item no menu
 		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		tabbedPane = new JTabbedPane(JTabbedPane.BOTTOM); // Container de pain�is
+		tabbedPane = new JTabbedPane(JTabbedPane.BOTTOM); // Container de painéis
 		contentPane.add(tabbedPane, BorderLayout.CENTER);
 		
 		JPanel painelDadosPessoais = new JPanel(); // Primeiro painel (painel de dados)
 		painelDadosPessoais.setBackground(new Color(95, 158, 160));
-		tabbedPane.addTab("Dados Pessoais", new ImageIcon(Prontuario.class.getResource("/figuras/folder.png")), painelDadosPessoais, null); // Setando �cone na guia dados pessoais do tabbedPane
+		tabbedPane.addTab("Dados Pessoais", new ImageIcon(Prontuario.class.getResource("/figuras/folder.png")), painelDadosPessoais, null); // Setando ícone na guia dados pessoais do tabbedPane
 		painelDadosPessoais.setLayout(new MigLayout("", "[][grow][grow][grow]", "[grow][grow][grow][grow][grow][grow]"));
 		
 		JLabel labelNome = new JLabel("Nome"); 
 		painelDadosPessoais.add(labelNome, "cell 0 0,alignx left"); 
 		
 		fieldNome = new JTextField(); // Campo de nome do paciente
-		painelDadosPessoais.add(fieldNome, "cell 1 0 3 1,growx"); // Inser��o do campo no painel
+		painelDadosPessoais.add(fieldNome, "cell 1 0 3 1,growx"); // Inserção do campo no painel
 		fieldNome.setColumns(10);
 		
 		JLabel labelCPF = new JLabel("CPF"); 
 		painelDadosPessoais.add(labelCPF, "cell 0 1,alignx left"); 
 		
 		textFieldCPF = new JTextField(); // Campo de cpf do paciente
-		painelDadosPessoais.add(textFieldCPF, "cell 1 1,growx"); // Inser��o do campo no painel
+		painelDadosPessoais.add(textFieldCPF, "cell 1 1,growx"); // Inserção do campo no painel
 		textFieldCPF.setColumns(10);
 		
 		JLabel labelNaturalidade = new JLabel("Naturalidade");
 		painelDadosPessoais.add(labelNaturalidade, "flowx,cell 2 1,alignx right");
 		
 		fieldNaturalidade = new JTextField(); // Campo de cidade de origem do paciente
-		painelDadosPessoais.add(fieldNaturalidade, "cell 3 1,growx"); // Inser��o do campo no painel
+		painelDadosPessoais.add(fieldNaturalidade, "cell 3 1,growx"); // Inserção do campo no painel
 		fieldNaturalidade.setColumns(10);
 		
 		JLabel labelSexo = new JLabel("Sexo");
 		painelDadosPessoais.add(labelSexo, "cell 0 2,alignx left");
 		
-		JComboBox comboBoxSexo = new JComboBox(); // Caixa de combina��o do sexo do paciente
-		comboBoxSexo.setModel(new DefaultComboBoxModel(new String[] {"Masculino", "Feminino"})); // Defini��o dos par�metros da caixa de combina��o
-		painelDadosPessoais.add(comboBoxSexo, "cell 1 2,growx"); // Inser��o do componente no painel
+		JComboBox comboBoxSexo = new JComboBox(); // Caixa de combinação do sexo do paciente
+		comboBoxSexo.setModel(new DefaultComboBoxModel(new String[] {"Masculino", "Feminino"})); // Definição dos parâmetros da caixa de combinação
+		painelDadosPessoais.add(comboBoxSexo, "cell 1 2,growx"); // Inserção do componente no painel
 		
 		JLabel labelDataNascimento = new JLabel("Data de nascimento");
 		painelDadosPessoais.add(labelDataNascimento, "cell 2 2,alignx right");
 		
 		fieldDataNascimento = new JTextField(); // Campo de data de nascimento do paciente
-		painelDadosPessoais.add(fieldDataNascimento, "cell 3 2,growx"); // Inser��o do campo no painel
+		painelDadosPessoais.add(fieldDataNascimento, "cell 3 2,growx"); // Inserção do campo no painel
 		fieldDataNascimento.setColumns(10);
 		
 		JLabel labelEstadoCivil = new JLabel("Estado Civil"); 
 		painelDadosPessoais.add(labelEstadoCivil, "cell 0 3,alignx trailing");
 		
-		JComboBox comboBoxEstadoCivil = new JComboBox(); // Caixa de combina��o do estado civil do paciente
-		comboBoxEstadoCivil.setModel(new DefaultComboBoxModel(new String[] {"Solteiro", "Uniao Estavel", "Casado", "Divorciado", "Viuvo"})); // Defini��o dos par�metros da caixa de combina��o
-		painelDadosPessoais.add(comboBoxEstadoCivil, "cell 1 3,growx"); // Inser��o do componente no painel
+		JComboBox comboBoxEstadoCivil = new JComboBox(); // Caixa de combinação do estado civil do paciente
+		comboBoxEstadoCivil.setModel(new DefaultComboBoxModel(new String[] {"Solteiro", "Uniao Estavel", "Casado", "Divorciado", "Viuvo"})); // Definição dos parâmetros da caixa de combinação
+		painelDadosPessoais.add(comboBoxEstadoCivil, "cell 1 3,growx"); // Inserção do componente no painel
 		
 		JLabel labelTelefone = new JLabel("Telefone");
 		painelDadosPessoais.add(labelTelefone, "cell 2 3,alignx right");
 		
 		fieldTelefone = new JTextField(); // Campo de telefone do paciente
-		painelDadosPessoais.add(fieldTelefone, "cell 3 3,growx"); // Inser��o do componente no painel
+		painelDadosPessoais.add(fieldTelefone, "cell 3 3,growx"); // Inserção do componente no painel
 		fieldTelefone.setColumns(10);
 		
 		JLabel labelEndereco = new JLabel("Endere\u00E7o");
 		painelDadosPessoais.add(labelEndereco, "cell 0 4,alignx left");
 		
 		fieldEndereco = new JTextField(); // Campo de telefone do paciente
-		painelDadosPessoais.add(fieldEndereco, "cell 1 4 3 1,growx"); // Inser��o do componente no painel
+		painelDadosPessoais.add(fieldEndereco, "cell 1 4 3 1,growx"); // Inserção do componente no painel
 		fieldEndereco.setColumns(10);
 		
 		JButton buttonSalvarDadosPessoais = new JButton("Salvar");
-		buttonSalvarDadosPessoais.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando �cone no bot�o
-		painelDadosPessoais.add(buttonSalvarDadosPessoais, "cell 0 5 4 1,alignx center");
+		buttonSalvarDadosPessoais.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando ícone no botão
+		painelDadosPessoais.add(buttonSalvarDadosPessoais, "cell 0 5 4 1,alignx center"); // Adicionanndo botão ao painel 
 		
 		JPanel painelAnamnese = new JPanel(); // Segundo painel (painel de anamnese)
 		painelAnamnese.setBackground(new Color(144, 238, 144));
-		tabbedPane.addTab("Anamnese", new ImageIcon(Prontuario.class.getResource("/figuras/conversa.png")), painelAnamnese, null); // Setando �cone na guia anamnese do tabbedPane
+		tabbedPane.addTab("Anamnese", new ImageIcon(Prontuario.class.getResource("/figuras/conversa.png")), painelAnamnese, null); // Setando ícone na guia anamnese do tabbedPane
 		painelAnamnese.setLayout(new MigLayout("", "[grow][grow]", "[grow][grow][grow][grow][grow][grow][grow]"));
 		
 		JLabel labelQueixaPrincipal = new JLabel("Queixa Principal");
@@ -167,8 +167,8 @@ public class Prontuario extends JFrame {
 		JScrollPane scrollPaneQueixaPrincipal = new JScrollPane(); 
 		painelAnamnese.add(scrollPaneQueixaPrincipal, "cell 0 1 2 1,grow");
 		
-		JTextArea textAreaQueixaPrincipal = new JTextArea(); // �rea de texto para queixa do paciente
-		scrollPaneQueixaPrincipal.setViewportView(textAreaQueixaPrincipal); 
+		JTextArea textAreaQueixaPrincipal = new JTextArea(); // Área de texto para queixa do paciente
+		scrollPaneQueixaPrincipal.setViewportView(textAreaQueixaPrincipal); // Inserção da área de texto no viewport do painel de rolagem
 		
 		JLabel labelHistoricoDoenca = new JLabel("Hist\u00F3rico da Doen\u00E7a Atual");
 		painelAnamnese.add(labelHistoricoDoenca, "cell 0 2");
@@ -176,19 +176,19 @@ public class Prontuario extends JFrame {
 		JLabel labelHistoricoFamiliar = new JLabel("Hist\u00F3rico Familiar");
 		painelAnamnese.add(labelHistoricoFamiliar, "cell 1 2");
 		
-		JScrollPane scrollPaneHistoricoDoenca = new JScrollPane();
+		JScrollPane scrollPaneHistoricoDoenca = new JScrollPane(); 
 		painelAnamnese.add(scrollPaneHistoricoDoenca, "cell 0 3,grow");
 		
-		JTextArea textAreaHistoricoDoenca = new JTextArea(); // �rea de texto para hist�rico da doen�a no paciente
-		scrollPaneHistoricoDoenca.setViewportView(textAreaHistoricoDoenca);
+		JTextArea textAreaHistoricoDoenca = new JTextArea(); // Área de texto para histórico da doença no paciente
+		scrollPaneHistoricoDoenca.setViewportView(textAreaHistoricoDoenca); // Inserção da área de texto no viewport do painel de rolagem
 		
 		JScrollPane scrollPaneHistoricoFamiliar = new JScrollPane();
 		painelAnamnese.add(scrollPaneHistoricoFamiliar, "cell 1 3,grow");
 		
-		JTextArea textAreaHistoricoFamiliar = new JTextArea(); // �rea de texto do historico familiar do paciente
-		scrollPaneHistoricoFamiliar.setViewportView(textAreaHistoricoFamiliar);
+		JTextArea textAreaHistoricoFamiliar = new JTextArea(); // Área de texto do historico familiar do paciente
+		scrollPaneHistoricoFamiliar.setViewportView(textAreaHistoricoFamiliar); // Inserção da área de texto no viewport do painel de rolagem
 		
-		JLabel labelAntecedentes = new JLabel("Antecedentes pessoais");
+		JLabel labelAntecedentes = new JLabel("Antecedentes pessoais"); 
 		painelAnamnese.add(labelAntecedentes, "cell 0 4");
 		
 		JLabel labelHabitos = new JLabel("H\u00E1bitos de vida");
@@ -197,22 +197,22 @@ public class Prontuario extends JFrame {
 		JScrollPane scrollPaneAntecedentes = new JScrollPane();
 		painelAnamnese.add(scrollPaneAntecedentes, "cell 0 5,grow");
 		
-		JTextArea textAreaAntecedentes = new JTextArea(); // �rea de texto para antecedentes do paciente
-		scrollPaneAntecedentes.setViewportView(textAreaAntecedentes);
+		JTextArea textAreaAntecedentes = new JTextArea(); // Área de texto para antecedentes do paciente
+		scrollPaneAntecedentes.setViewportView(textAreaAntecedentes); // Inserção da área de texto no viewport do painel de rolagem
 		
 		JScrollPane scrollPaneHabitos = new JScrollPane();
 		painelAnamnese.add(scrollPaneHabitos, "cell 1 5,grow");
 		
-		JTextArea textAreaHabitos = new JTextArea(); // �rea de texto para h�bitos do paciente
-		scrollPaneHabitos.setViewportView(textAreaHabitos);
+		JTextArea textAreaHabitos = new JTextArea(); // Área de texto para hábitos do paciente
+		scrollPaneHabitos.setViewportView(textAreaHabitos); // Inserção da área de texto no viewport do painel de rolagem
 		
 		JButton buttonSalvarAnamnese = new JButton("Salvar");
-		buttonSalvarAnamnese.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando �cone no bot�o
-		painelAnamnese.add(buttonSalvarAnamnese, "cell 0 6 2 1,alignx center");
+		buttonSalvarAnamnese.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando ícone no botão
+		painelAnamnese.add(buttonSalvarAnamnese, "cell 0 6 2 1,alignx center"); // Adicionanndo botão ao painel 
 		
 		JPanel painelExames = new JPanel(); // Terceiro painel (painel de exames)
 		painelExames.setBackground(new Color(255, 165, 0));
-		tabbedPane.addTab("Exames", new ImageIcon(Prontuario.class.getResource("/figuras/test.png")), painelExames, null); // Setando �cone na guia exames do tabbedPane
+		tabbedPane.addTab("Exames", new ImageIcon(Prontuario.class.getResource("/figuras/test.png")), painelExames, null); // Setando ícone na guia exames do tabbedPane
 		painelExames.setLayout(new MigLayout("", "[][grow]", "[grow][grow][grow][grow][grow]"));
 		
 		JLabel labelTipoExame = new JLabel("Tipo de Exame");
@@ -236,31 +236,31 @@ public class Prontuario extends JFrame {
 		painelExames.add(textAreaLaudo, "cell 1 2,growx");
 		
 		JButton buttonSalvarExames = new JButton("Salvar");
-		buttonSalvarExames.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando �cone no bot�o
-		painelExames.add(buttonSalvarExames, "cell 0 4 2 1,alignx center");
+		buttonSalvarExames.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando ícone no botão
+		painelExames.add(buttonSalvarExames, "cell 0 4 2 1,alignx center"); // Adicionanndo botão ao painel 
 		
 		JPanel painelTratamento = new JPanel(); // Quarto painel (painel de tratamento)
 		painelTratamento.setBackground(new Color(233, 150, 122));
-		tabbedPane.addTab("Tratamento", new ImageIcon(Prontuario.class.getResource("/figuras/remedio.png")), painelTratamento, null); // Setando �cone na guia tratamento do tabbedPane
+		tabbedPane.addTab("Tratamento", new ImageIcon(Prontuario.class.getResource("/figuras/remedio.png")), painelTratamento, null); // Setando ícone na guia tratamento do tabbedPane
 		painelTratamento.setLayout(new MigLayout("", "[grow]", "[grow][grow][grow][grow][grow][grow]"));
 		
 		JLabel labelTratamentoTipo = new JLabel("Tipo de Tratamento");
 		painelTratamento.add(labelTratamentoTipo, "cell 0 0");
 		
 		textFieldTratamentoTipo = new JTextField(); // Campo de texto para o nome do tipo de tratamento do paciente
-		painelTratamento.add(textFieldTratamentoTipo, "cell 0 1,growx");
+		painelTratamento.add(textFieldTratamentoTipo, "cell 0 1,growx"); // Inserção do campo no painel
 		textFieldTratamentoTipo.setColumns(10);
 		
 		JLabel labelTratamentoDescricao = new JLabel("Descri\u00E7\u00E3o");
 		painelTratamento.add(labelTratamentoDescricao, "cell 0 2");
 		
-		TextArea textAreaTratamentoDescricao = new TextArea();
-		painelTratamento.add(textAreaTratamentoDescricao, "cell 0 3,growx");
+		TextArea textAreaTratamentoDescricao = new TextArea(); // Área de texto para a descrição do tratamento do paciente
+		painelTratamento.add(textAreaTratamentoDescricao, "cell 0 3,growx"); // Inserção da área de texto no painel
 		
 		JButton buttonSalvarTratamento = new JButton("Salvar"); 
-		buttonSalvarTratamento.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando �cone no bot�o
-		painelTratamento.add(buttonSalvarTratamento, "cell 0 5,alignx center");
-	}
+		buttonSalvarTratamento.setIcon(new ImageIcon(Prontuario.class.getResource("/figuras/ok1.png"))); // Setando ícone no botão
+		painelTratamento.add(buttonSalvarTratamento, "cell 0 5,alignx center"); // Adicionanndo botão ao painel 
+	} // public Prontuario()
 
 	public JTabbedPane getTabbedPane() {
 		return tabbedPane;
@@ -270,6 +270,4 @@ public class Prontuario extends JFrame {
 		this.tabbedPane = tabbedPane;
 	}
 	
-	
-
-}
+} // public class Prontuario extends JFrame
