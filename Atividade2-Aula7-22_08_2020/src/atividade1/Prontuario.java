@@ -2,6 +2,7 @@ package atividade1;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+//teste
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
